@@ -15,3 +15,6 @@ INSERT INTO "employee" ("emp_id", "emp_company", "emp_email", "emp_name") VALUES
 -- changeset chandantiwari:23123134
 CREATE TABLE "student" ("stu_id" INTEGER NOT NULL, "stu_school" VARCHAR(255), "stu_email" VARCHAR(255), "stu_name" VARCHAR(255), CONSTRAINT "student_pkey" PRIMARY KEY ("stu_id"));
 -- rollback DROP TABLE student
+
+-- changeset cahndantiwari:564564354
+ALTER TABLE "student" ADD COLUMN stu_marks INTEGER;

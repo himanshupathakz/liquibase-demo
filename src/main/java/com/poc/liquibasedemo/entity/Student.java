@@ -28,4 +28,7 @@ public class Student {
 
     @Column(name = "stuEmail")
     private String email;
+
+    @Column(name = "stuMarks")
+    private int marks;
 }
