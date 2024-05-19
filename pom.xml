@@ -91,8 +91,10 @@
 						</goals>
 						<configuration>
 							<excludes>
-								<exclude>com.librbary.main.config.*</exclude>
-								<exclude>com.librbary.main.Application.class</exclude>
+								<exclude>com.poc.liquibasedemo.repository.*</exclude>
+								<exclude>com.poc.liquibasedemo.exception.*</exclude>
+								<exclude>com.poc.liquibasedemo.entity.*</exclude>
+								<exclude>com.poc.liquibasedemo.LiquibaseDemoApplication.class</exclude>
 							</excludes>
 							<rules>
 								<rule>
