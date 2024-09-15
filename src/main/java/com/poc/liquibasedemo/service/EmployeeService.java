@@ -14,26 +14,27 @@ import java.util.Optional;
 @Service
 public class EmployeeService {
 
-    private final EmployeeRepository employeeRepository;
+	private final EmployeeRepository employeeRepository;
 
-    private static final Logger log = LoggerFactory.getLogger(EmployeeService.class);
+	private static final Logger log = LoggerFactory.getLogger(EmployeeService.class);
 
-    public EmployeeService(EmployeeRepository employeeRepository) {
-        this.employeeRepository = employeeRepository;
-    }
-
-	/*
-	 * public Employee getEmployeeById(int employeeId) { try { Optional<Employee>
-	 * employee = employeeRepository.findById(employeeId); if (employee.isPresent())
-	 * { log.info("Employee: {}", employee.get()); return employee.get(); } else {
-	 * log.error("Employee Not found!"); throw new
-	 * EmployeeException("Employee not found!"); } } catch (IllegalArgumentException
-	 * ex) { log.error("EmployeeId is null, please pass a valid ID"); throw ex; } }
-	 * 
-	 * public void addEmployee(Employee employee) {
-	 * employeeRepository.save(employee); }
-	 */
-
+	public EmployeeService(EmployeeRepository employeeRepository) {
+		this.employeeRepository = employeeRepository;
+	}
+	
+	  
+	  public Employee getEmployeeById(int employeeId) { try { Optional<Employee>
+	  employee = employeeRepository.findById(employeeId); if (employee.isPresent())
+	  { log.info("Employee: {}", employee.get()); return employee.get(); } else {
+	  log.error("Employee Not found!"); throw new
+	  EmployeeException("Employee not found!"); } } catch (IllegalArgumentException
+	  ex) { log.error("EmployeeId is null, please pass a valid ID"); throw ex; } }
+	 
+	  public void addEmployee(Employee employee) {
+	  employeeRepository.save(employee); }
+	  
+	  
+	  
 	/*
 	 * public Employee updateEmployee(Employee updatedEmployee, int employeeId) {
 	 * Employee employee = employeeRepository.findById(employeeId).orElse(null);
@@ -45,9 +46,9 @@ public class EmployeeService {
 	 * null) { employee.setEmail(emp.getEmail()); } if(emp.getName() != null) {
 	 * employee.setName(emp.getName()); } });
 	 */
-       
-
-	/*
-	 * return employee; }
-	 */
+	  
+	  
+	  
+	  return employee; }
+	 
 }
